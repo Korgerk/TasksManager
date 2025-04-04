@@ -1,3 +1,5 @@
+package main;
+
 import java.util.*;
 
 public class TaskManager {
@@ -24,8 +26,11 @@ public class TaskManager {
 
     public Subtask addSubtask(Subtask subtask) { // добавление подзадачи
         subtask.setId(getNextID());
-        Epic epic = epics.get(subtask.getEpicID());
-        epic.addSubtask(subtask);
+        Epic epic = epics.get(subtask.getEpicID()); // Получаем эпик по ID
+        if (epic == null) {
+            throw new IllegalArgumentException("Эпик с ID " + subtask.getEpicID() + " не существует.");
+        }
+        epic.addSubtask(subtask); // Добавляем подзадачу в эпик
         subtasks.put(subtask.getId(), subtask);
         updateEpicStatus(epic);
         return subtask;
