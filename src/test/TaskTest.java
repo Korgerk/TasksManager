@@ -1,8 +1,8 @@
 package test;
 
 import main.Task;
-import main.Status;
 import main.TaskManager;
+import main.Status;
 
 public class TaskTest {
     public static void main(String[] args) {

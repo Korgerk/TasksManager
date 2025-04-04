@@ -1,10 +1,10 @@
 package test;
 
-import main.Epic;
 import main.Subtask;
 import main.Task;
 import main.TaskManager;
 import main.Status;
+import main.Epic;
 
 import java.util.ArrayList;
 
@@ -13,7 +13,7 @@ public class TaskManagerTest {
         TaskManager taskManager = new TaskManager();
 
 
-        // Полный цикл тестов TaskTest
+        // Полный цикл тестов test.TaskTest
         Task task1 = taskManager.addTask(new Task("Задача 1", "Описание 1"));
         Task task2 = taskManager.addTask(new Task("Задача 2", "Описание 2"));
         System.out.println("Созданы две задачи:");
@@ -58,7 +58,7 @@ public class TaskManagerTest {
 
         taskManager.deleteEpicByID(epicForSubtasks.getId());
 
-        // Полный цикл тестов EpicTest
+        // Полный цикл тестов test.EpicTest
         Epic epic1 = taskManager.addEpic(new Epic("Эпик 1", "Описание 1"));
         Epic epic2 = taskManager.addEpic(new Epic("Эпик 2", "Описание 2"));
         System.out.println("Созданы два эпика:");
@@ -98,7 +98,7 @@ public class TaskManagerTest {
         }
         System.out.println();
 
-        System.out.println("Состояние TaskManager:");
+        System.out.println("Состояние main.TaskManager:");
         System.out.println("Количество задач: " + taskManager.getTasks().size());
         System.out.println("Количество подзадач: " + taskManager.getSubtasks().size());
         System.out.println("Количество эпиков: " + taskManager.getEpics().size());
@@ -110,7 +110,7 @@ public class TaskManagerTest {
         taskManager.deleteSubtasks();
         taskManager.deleteEpics();
 
-        System.out.println("Финальное состояние TaskManager:");
+        System.out.println("Финальное состояние main.TaskManager:");
         System.out.println("Количество задач: " + taskManager.getTasks().size());
         System.out.println("Количество подзадач: " + taskManager.getSubtasks().size());
         System.out.println("Количество эпиков: " + taskManager.getEpics().size());

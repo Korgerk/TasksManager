@@ -1,10 +1,9 @@
 package test;
 
-import main.Epic;
 import main.Subtask;
 import main.TaskManager;
 import main.Status;
-
+import main.Epic;
 import java.util.ArrayList;
 
 public class EpicTest {

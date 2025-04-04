@@ -1,9 +1,9 @@
 package test;
 
-import main.Epic;
 import main.Subtask;
-import main.Status;
 import main.TaskManager;
+import main.Status;
+import main.Epic;
 
 public class SubTaskTest {
     public static void main(String[] args) {
